@@ -1,4 +1,4 @@
-# Emotion-radar-chart :sun_with_face: :partly_sunny: :umbrella
+## Emotion Radar Chart :sun_with_face: :partly_sunny: :umbrella:
 
 ### Built with HTML, CSS, JavaScript, DOM manipulation and Char.js
 
