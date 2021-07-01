@@ -21,8 +21,8 @@
               datasets: [{
                 label: 'Emotion', 
                 data: [happy.value,enthusiastic.value,optimistic.value, proud.value, angry.value, sad.value, unhappy.value, annoyed.value, disappointed.value, frustrated.value, worried.value, bitter.value, hurt.value],
-                backgroundColor:['lightgreen', 'purple', 'cornflowerblue'], 
-                borderColor: ['lightgreen', 'purple', 'cornflowerblue'], 
+                backgroundColor:"rgba(200,0,0,0.2)", 
+                borderColor: "rgba(200,0,0,0.2)", 
               }]
             }, 
             option : {}
