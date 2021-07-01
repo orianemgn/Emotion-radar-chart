@@ -8,62 +8,65 @@
         
       </head>
       <body>
-        <div>
-          <div>
+        <form method="post">
             <div>
-              <label for="happy">Happy:</label>
-              <input id="happy" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+              <div>
+                <label for="happy">Happy:</label>
+                <input id="happy" type="range" name="array[]" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+              </div>
+              <div>
+                <label for="enthusiastic">Enthusiastic:</label>
+                <input id="enthusiastic" type="range" name="array[]" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+              </div>
+              <div>
+                <label for="optimistic">Optimistic</label>
+                <input id="optimistic" type="range" name="array[]" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+              </div>
+              <div>
+                <label for="proud">Proud</label>
+                <input id="proud" type="range" name="array[]" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+              </div>
+              <div>
+                <label for="angry">Angry</label>
+                <input id="angry" type="range" name="array[]" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+              </div>
+               <div>
+                <label for="sad">Sad</label>
+                <input id="sad" type="range" name="array[]" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+              </div>
+              <div>
+                <label for="unhappy">Unhappy</label>
+                <input id="unhappy" type="range" name="array[]" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+              </div>
+              <div>
+                <label for="annoyed">Annoyed</label>
+                <input id="annoyed" type="range" name="array[]" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+              </div>
+              <div>
+                <label for="disappointed">Disappointed</label>
+                <input id="disappointed" type="range" name="array[]" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+              </div>
+              <div>
+                <label for="frustrated">Frustrated</label>
+                <input id="frustrated" type="range" name="array[]" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+              </div>
+              <div>
+                <label for="worried">Worried</label>
+                <input id="worried" type="range" name="array[]" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+              </div>
+              <div>
+                <label for="bitter">Bitter</label>
+                <input id="bitter" type="range" name="array[]" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+              </div>
+              <div>
+                  <label for="hurt">Hurt</label>
+                  <input id="hurt" type="range" name="array[]" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+              </div>
             </div>
-            <div>
-              <label for="enthusiastic">Enthusiastic:</label>
-              <input id="enthusiastic" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
-            </div>
-            <div>
-              <label for="optimistic">Optimistic</label>
-              <input id="optimistic" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
-            </div>
-            <div>
-              <label for="proud">Proud</label>
-              <input id="proud" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
-            </div>
-            <div>
-              <label for="angry">Angry</label>
-              <input id="angry" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
-            </div>
-             <div>
-              <label for="sad">Sad</label>
-              <input id="sad" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
-            </div>
-            <div>
-              <label for="unhappy">Unhappy</label>
-              <input id="unhappy" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
-            </div>
-            <div>
-              <label for="annoyed">Annoyed</label>
-              <input id="annoyed" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
-            </div>
-            <div>
-              <label for="disappointed">Disappointed</label>
-              <input id="disappointed" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
-            </div>
-            <div>
-              <label for="frustrated">Frustrated</label>
-              <input id="frustrated" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
-            </div>
-            <div>
-              <label for="worried">Worried</label>
-              <input id="worried" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
-            </div>
-            <div>
-              <label for="bitter">Bitter</label>
-              <input id="bitter" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
-            </div>
-            <div>
-                <label for="hurt">Hurt</label>
-                <input id="hurt" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
-            </div>
-          </div>
-        </div>
+            <button type="button" name="button" onclick="getDatas()">
+              Submit
+          </button>
+          </form>
         <div>
           <canvas id="chart"></canvas>
         </div>
