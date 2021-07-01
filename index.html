@@ -1,0 +1,106 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chart JS</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <div>
+          <label for="happy">Happy:</label>
+          <input id="happy" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+        </div>
+        <div>
+          <label for="enthusiastic">Enthusiastic:</label>
+          <input id="enthusiastic" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+        </div>
+        <div>
+          <label for="optimistic">Optimistic</label>
+          <input id="optimistic" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+        </div>
+        <div>
+          <label for="proud">Proud</label>
+          <input id="proud" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+        </div>
+        <div>
+          <label for="angry">Angry</label>
+          <input id="angry" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+        </div>
+         <div>
+          <label for="sad">Sad</label>
+          <input id="sad" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+        </div>
+        <div>
+          <label for="unhappy">Unhappy</label>
+          <input id="unhappy" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+        </div>
+        <div>
+          <label for="annoyed">Annoyed</label>
+          <input id="annoyed" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+        </div>
+        <div>
+          <label for="disappointed">Disappointed</label>
+          <input id="disappointed" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+        </div>
+        <div>
+          <label for="frustrated">Frustrated</label>
+          <input id="frustrated" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+        </div>
+        <div>
+          <label for="worried">Worried</label>
+          <input id="worried" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+        </div>
+        <div>
+          <label for="bitter">Bitter</label>
+          <input id="bitter" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+        </div>
+        <div>
+            <label for="hurt">Hurt</label>
+            <input id="hurt" type="range" value="" min="0" max="5" step="1" onchange="updatechart()"/>
+        </div>
+      </div>
+    </div>
+    <div>
+      <canvas id="chart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+      var happy = document.getElementById('happy'); 
+      var enthusiastic = document.getElementById('enthusiastic'); 
+      var sales = document.getElementById('sales'); 
+      var proud = document.getElementById('proud');
+      var angry = document.getElementById('angry');
+      var sad = document.getElementById('sad');
+      var unhappy = document.getElementById('unhappy');
+      var annoyed = document.getElementById('annoyed');
+      var disappointed = document.getElementById('disappointed');
+      var frustrated = document.getElementById('frustrated');
+      var worried = document.getElementById('worried');
+      var bitter = document.getElementById('bitter'); 
+      var hurt = document.getElementById('hurt'); 
+
+
+      var ctx= new Chart(chart, {
+        type: 'radar', 
+        data: {
+          labels: ['happy', 'enthusiastic', 'optimistic', 'proud', 'angry','sad', 'unhappy', 'annoyed', 'disappointed', 'frustrated', 'worried', 'bitter', 'hurt'], 
+          datasets: [{
+            label: 'Emotion', 
+            data: [happy.value,enthusiastic.value,optimistic.value, proud.value, angry.value, sad.value, unhappy.value, annoyed.value, disappointed.value, frustrated.value, worried.value, bitter.value, hurt.value],
+            backgroundColor:['lightgreen', 'purple', 'cornflowerblue'], 
+            borderColor: ['lightgreen', 'purple', 'cornflowerblue'], 
+          }]
+        }, 
+        option : {}
+      });
+      function updatechart(){
+        var updateValues = [happy.value,enthusiastic.value,optimistic.value, proud.value, angry.value, sad.value, unhappy.value, annoyed.value, disappointed.value, frustrated.value, worried.value, bitter.value, hurt.value];
+        ctx.data.datasets[0].data = updateValues; 
+        ctx.update(); 
+      }
+    </script>
+  </body>
+ <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> --> 
+<!-- <canvas id="marksChart" width="600" height="400">
+</canvas>
+   -->
